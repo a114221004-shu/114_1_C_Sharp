@@ -46,19 +46,21 @@
             // label1
             // 
             label1.Font = new Font("新細明體", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 136);
-            label1.Location = new Point(187, 33);
+            label1.Location = new Point(229, 40);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(824, 72);
+            label1.Size = new Size(1007, 87);
             label1.TabIndex = 0;
-            label1.Text = "按一張卡會出現他的名字";
+            label1.Text = "Click a Card to See Its Name";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // eightPictureBox
             // 
             eightPictureBox.Image = Properties.Resources._8_Diamonds;
-            eightPictureBox.Location = new Point(12, 108);
+            eightPictureBox.Location = new Point(15, 131);
+            eightPictureBox.Margin = new Padding(4);
             eightPictureBox.Name = "eightPictureBox";
-            eightPictureBox.Size = new Size(238, 277);
+            eightPictureBox.Size = new Size(291, 335);
             eightPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             eightPictureBox.TabIndex = 1;
             eightPictureBox.TabStop = false;
@@ -67,9 +69,10 @@
             // thirteenPictureBox
             // 
             thirteenPictureBox.Image = Properties.Resources.King_Spades;
-            thirteenPictureBox.Location = new Point(473, 108);
+            thirteenPictureBox.Location = new Point(578, 131);
+            thirteenPictureBox.Margin = new Padding(4);
             thirteenPictureBox.Name = "thirteenPictureBox";
-            thirteenPictureBox.Size = new Size(238, 277);
+            thirteenPictureBox.Size = new Size(291, 335);
             thirteenPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             thirteenPictureBox.TabIndex = 2;
             thirteenPictureBox.TabStop = false;
@@ -78,9 +81,10 @@
             // twoPictureBox
             // 
             twoPictureBox.Image = Properties.Resources._2_Clubs;
-            twoPictureBox.Location = new Point(240, 108);
+            twoPictureBox.Location = new Point(293, 131);
+            twoPictureBox.Margin = new Padding(4);
             twoPictureBox.Name = "twoPictureBox";
-            twoPictureBox.Size = new Size(238, 277);
+            twoPictureBox.Size = new Size(291, 335);
             twoPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             twoPictureBox.TabIndex = 3;
             twoPictureBox.TabStop = false;
@@ -89,9 +93,10 @@
             // onePictureBox
             // 
             onePictureBox.Image = Properties.Resources.Ace_Spades;
-            onePictureBox.Location = new Point(704, 108);
+            onePictureBox.Location = new Point(860, 131);
+            onePictureBox.Margin = new Padding(4);
             onePictureBox.Name = "onePictureBox";
-            onePictureBox.Size = new Size(238, 277);
+            onePictureBox.Size = new Size(291, 335);
             onePictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             onePictureBox.TabIndex = 4;
             onePictureBox.TabStop = false;
@@ -100,9 +105,10 @@
             // elevenPictureBox
             // 
             elevenPictureBox.Image = Properties.Resources.Joker_Black;
-            elevenPictureBox.Location = new Point(936, 108);
+            elevenPictureBox.Location = new Point(1144, 131);
+            elevenPictureBox.Margin = new Padding(4);
             elevenPictureBox.Name = "elevenPictureBox";
-            elevenPictureBox.Size = new Size(238, 277);
+            elevenPictureBox.Size = new Size(291, 335);
             elevenPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             elevenPictureBox.TabIndex = 5;
             elevenPictureBox.TabStop = false;
@@ -112,9 +118,10 @@
             // 
             shownameLabel.BorderStyle = BorderStyle.FixedSingle;
             shownameLabel.Font = new Font("新細明體", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 136);
-            shownameLabel.Location = new Point(12, 397);
+            shownameLabel.Location = new Point(15, 481);
+            shownameLabel.Margin = new Padding(4, 0, 4, 0);
             shownameLabel.Name = "shownameLabel";
-            shownameLabel.Size = new Size(1162, 56);
+            shownameLabel.Size = new Size(1420, 67);
             shownameLabel.TabIndex = 6;
             shownameLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -122,9 +129,10 @@
             // 
             exitButton.BackColor = SystemColors.ActiveBorder;
             exitButton.Font = new Font("新細明體", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 136);
-            exitButton.Location = new Point(473, 468);
+            exitButton.Location = new Point(578, 567);
+            exitButton.Margin = new Padding(4);
             exitButton.Name = "exitButton";
-            exitButton.Size = new Size(238, 57);
+            exitButton.Size = new Size(291, 69);
             exitButton.TabIndex = 7;
             exitButton.Text = "Exit";
             exitButton.UseVisualStyleBackColor = false;
@@ -132,9 +140,9 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(9F, 19F);
+            AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1186, 537);
+            ClientSize = new Size(1450, 650);
             Controls.Add(exitButton);
             Controls.Add(shownameLabel);
             Controls.Add(elevenPictureBox);
@@ -143,8 +151,9 @@
             Controls.Add(thirteenPictureBox);
             Controls.Add(eightPictureBox);
             Controls.Add(label1);
+            Margin = new Padding(4);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Card Identifier";
             ((System.ComponentModel.ISupportInitialize)eightPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)thirteenPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)twoPictureBox).EndInit();

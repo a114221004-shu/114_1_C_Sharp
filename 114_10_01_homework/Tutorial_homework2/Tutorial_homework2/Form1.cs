@@ -14,27 +14,27 @@ namespace Tutorial_homework2
 
         private void eightPictureBox_Click(object sender, EventArgs e)
         {
-            shownameLabel.Text = "¤è¶ô¤K";
+            shownameLabel.Text = "Eight of Diamonds";
         }
 
         private void twoPictureBox_Click(object sender, EventArgs e)
         {
-            shownameLabel.Text = "±öªá¤G";
+            shownameLabel.Text = "Two of Clubs";
         }
 
         private void thirteenPictureBox_Click(object sender, EventArgs e)
         {
-            shownameLabel.Text = "¶Â®çK";
+            shownameLabel.Text = "King of Spades";
         }
 
         private void onePictureBox_Click(object sender, EventArgs e)
         {
-            shownameLabel.Text = "¶Â®çA";
+            shownameLabel.Text = "Ace of Spades";
         }
 
         private void elevenPictureBox_Click(object sender, EventArgs e)
         {
-            shownameLabel.Text = "°­µP";
+            shownameLabel.Text = "Joker";
         }
     }
 }

@@ -40,9 +40,10 @@
             // headPictureBox
             // 
             headPictureBox.Image = Properties.Resources.Heads1;
-            headPictureBox.Location = new Point(55, 47);
+            headPictureBox.Location = new Point(67, 57);
+            headPictureBox.Margin = new Padding(4, 4, 4, 4);
             headPictureBox.Name = "headPictureBox";
-            headPictureBox.Size = new Size(312, 224);
+            headPictureBox.Size = new Size(381, 271);
             headPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             headPictureBox.TabIndex = 0;
             headPictureBox.TabStop = false;
@@ -51,9 +52,10 @@
             // tailPictureBox
             // 
             tailPictureBox.Image = Properties.Resources.Tails1;
-            tailPictureBox.Location = new Point(433, 47);
+            tailPictureBox.Location = new Point(529, 57);
+            tailPictureBox.Margin = new Padding(4, 4, 4, 4);
             tailPictureBox.Name = "tailPictureBox";
-            tailPictureBox.Size = new Size(312, 224);
+            tailPictureBox.Size = new Size(381, 271);
             tailPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             tailPictureBox.TabIndex = 1;
             tailPictureBox.TabStop = false;
@@ -63,9 +65,10 @@
             // 
             showheadsButton.BackColor = SystemColors.ActiveBorder;
             showheadsButton.Font = new Font("新細明體", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 136);
-            showheadsButton.Location = new Point(30, 310);
+            showheadsButton.Location = new Point(37, 375);
+            showheadsButton.Margin = new Padding(4, 4, 4, 4);
             showheadsButton.Name = "showheadsButton";
-            showheadsButton.Size = new Size(221, 74);
+            showheadsButton.Size = new Size(270, 90);
             showheadsButton.TabIndex = 2;
             showheadsButton.Text = "Show Heads";
             showheadsButton.UseVisualStyleBackColor = false;
@@ -75,9 +78,10 @@
             // 
             exitButton.BackColor = SystemColors.ActiveBorder;
             exitButton.Font = new Font("新細明體", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 136);
-            exitButton.Location = new Point(546, 310);
+            exitButton.Location = new Point(667, 375);
+            exitButton.Margin = new Padding(4, 4, 4, 4);
             exitButton.Name = "exitButton";
-            exitButton.Size = new Size(221, 74);
+            exitButton.Size = new Size(270, 90);
             exitButton.TabIndex = 3;
             exitButton.Text = "Exit";
             exitButton.UseVisualStyleBackColor = false;
@@ -87,9 +91,10 @@
             // 
             showtailsButton.BackColor = SystemColors.ActiveBorder;
             showtailsButton.Font = new Font("新細明體", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 136);
-            showtailsButton.Location = new Point(294, 310);
+            showtailsButton.Location = new Point(359, 375);
+            showtailsButton.Margin = new Padding(4, 4, 4, 4);
             showtailsButton.Name = "showtailsButton";
-            showtailsButton.Size = new Size(221, 74);
+            showtailsButton.Size = new Size(270, 90);
             showtailsButton.TabIndex = 4;
             showtailsButton.Text = "Show Tails";
             showtailsButton.UseVisualStyleBackColor = false;
@@ -97,16 +102,17 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(9F, 19F);
+            AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(978, 545);
             Controls.Add(showtailsButton);
             Controls.Add(exitButton);
             Controls.Add(showheadsButton);
             Controls.Add(tailPictureBox);
             Controls.Add(headPictureBox);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Heads or Tails";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)headPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)tailPictureBox).EndInit();
