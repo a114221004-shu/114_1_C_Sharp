@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Test_Average
+{
+    public partial class Form1 : Form
+    {
+        // 建構函式，初始化表單元件
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        // 當「計算平均」按鈕被點擊時執行
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            // 嘗試將三個測驗分數文字框的內容轉換為數值
+            if (double.TryParse(test1TextBox.Text, out double test1) &&
+                double.TryParse(test2TextBox.Text, out double test2) &&
+                double.TryParse(test3TextBox.Text, out double test3))
+            {
+                // 計算三個分數的平均值
+                double average = (test1 + test2 + test3) / 3.0;
+                // 將平均分數顯示在標籤上，保留小數點後兩位
+                averageLabel.Text = average.ToString("F2");
+            }
+            else
+            {
+                // 若輸入無法轉換為數值，顯示錯誤訊息
+                MessageBox.Show("請輸入有效的數字分數。", "輸入錯誤");
+            }
+        }
+
+        // 當「清除」按鈕被點擊時執行
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            // 清空三個分數文字框及平均分數標籤
+            test1TextBox.Text = "";
+            test2TextBox.Text = "";
+            test3TextBox.Text = "";
+            averageLabel.Text = "";
+            // 將游標移回第一個分數文字框
+            test1TextBox.Focus();
+        }
+
+        // 當「離開」按鈕被點擊時執行
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            // 關閉表單
+            this.Close();
+        }
+    }
+}
