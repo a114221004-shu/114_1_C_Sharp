@@ -1,0 +1,11 @@
+C:\Users\m303\Desktop\114_1_C_Sharp\Chap3HW\How Much Insurance\How Much Insurance\bin\Debug\How Much Insurance.exe.config
+C:\Users\m303\Desktop\114_1_C_Sharp\Chap3HW\How Much Insurance\How Much Insurance\bin\Debug\How Much Insurance.exe
+C:\Users\m303\Desktop\114_1_C_Sharp\Chap3HW\How Much Insurance\How Much Insurance\bin\Debug\How Much Insurance.pdb
+C:\Users\m303\Desktop\114_1_C_Sharp\Chap3HW\How Much Insurance\How Much Insurance\obj\Debug\How Much Insurance.csproj.AssemblyReference.cache
+C:\Users\m303\Desktop\114_1_C_Sharp\Chap3HW\How Much Insurance\How Much Insurance\obj\Debug\How_Much_Insurance.Form1.resources
+C:\Users\m303\Desktop\114_1_C_Sharp\Chap3HW\How Much Insurance\How Much Insurance\obj\Debug\How_Much_Insurance.Properties.Resources.resources
+C:\Users\m303\Desktop\114_1_C_Sharp\Chap3HW\How Much Insurance\How Much Insurance\obj\Debug\How Much Insurance.csproj.GenerateResource.cache
+C:\Users\m303\Desktop\114_1_C_Sharp\Chap3HW\How Much Insurance\How Much Insurance\obj\Debug\How Much Insurance.csproj.CoreCompileInputs.cache
+C:\Users\m303\Desktop\114_1_C_Sharp\Chap3HW\How Much Insurance\How Much Insurance\obj\Debug\How Much Insurance.exe
+C:\Users\m303\Desktop\114_1_C_Sharp\Chap3HW\How Much Insurance\How Much Insurance\obj\Debug\How Much Insurance.pdb
+C:\Users\m303\Desktop\114_1_C_Sharp\Chap3HW\How Much Insurance\How Much Insurance\obj\Debug\How Much Insurance.exe.config
