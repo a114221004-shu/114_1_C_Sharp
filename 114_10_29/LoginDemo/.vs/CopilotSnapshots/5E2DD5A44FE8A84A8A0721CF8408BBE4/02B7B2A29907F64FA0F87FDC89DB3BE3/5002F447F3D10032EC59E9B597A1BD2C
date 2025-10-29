@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace LoginDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void buttonCheck_Click(object sender, EventArgs e)
+        {
+            string account = this.textBoxAccount.Text.Trim();
+            string password = this.textBoxPassword.Text;
+
+            if (string.IsNullOrEmpty(account))
+            {
+                this.labelResult.Text = "請輸入帳號";
+                return;
+            }
+
+            if (string.IsNullOrEmpty(password))
+            {
+                this.labelResult.Text = "請輸入密碼";
+                return;
+            }
+
+            // Simple check example: account == "user" and password == "pass"
+            if (account == "user" && password == "pass")
+            {
+                this.labelResult.Text = "登入成功";
+            }
+            else
+            {
+                this.labelResult.Text = "帳號或密碼錯誤";
+            }
+        }
+    }
+}
