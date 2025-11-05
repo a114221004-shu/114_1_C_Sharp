@@ -1,0 +1,77 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace RadioButtonDemo
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // 可在此加入載入時的初始化程式碼
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void sendButton_Click(object sender, EventArgs e)
+        {
+            String message = "點餐內容：";
+            String drink = "";
+            String sandwich = "";
+
+            if (coffeeRadioButton.Checked)
+            {
+                drink = "咖啡 ";
+            }
+            else if (redteaRadioButton.Checked)
+            {
+                drink = "紅茶 ";
+            }
+            else if (juiceRadioButton.Checked)
+            {
+                drink = "果汁 ";
+            }
+            else if (milkteaRadioButton.Checked)
+            {
+                drink = "奶茶 ";
+            }
+            else
+            {
+                drink = "";
+            }
+
+            if (jellyRadioButton.Checked)
+            {
+                sandwich = "果醬三明治 ";
+            }
+            else if (hanRadioButton.Checked)
+            {
+                sandwich = "火腿三明治 ";
+            }
+            else if (tunaRadioButton.Checked)
+            {
+                sandwich = "鮪魚三明治 ";
+            }
+            else
+            {
+                sandwich = "";
+            }
+
+            MessageBox.Show(message + drink + sandwich);
+        }
+    }
+}
