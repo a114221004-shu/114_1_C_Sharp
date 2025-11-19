@@ -1,0 +1,118 @@
+﻿namespace South_America
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// 必需的設計器變數。
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// 清理所有正在使用的資源。
+        /// </summary>
+        /// <param name="disposing">如果應釋放託管資源，則為 true；否則為 false。</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// 設計器支援所需的方法 - 請勿使用程式碼編輯器修改此方法的內容。
+        /// 以下為 InitializeComponent 的實作，會建立表單中的所有元件並設定其屬性。
+        /// 我在這裡加入繁體中文的詳細註解，說明每個元件的用途與屬性變更，並將所有可見文字設為繁體中文，字型大小設為 18。
+        /// 注意：其他程式邏輯與控制項名稱皆保持不變。
+        /// </summary>
+        private void InitializeComponent()
+        {
+            // 建立 ListBox：用於顯示南美洲國家清單
+            this.countriesListBox = new System.Windows.Forms.ListBox();
+            // 建立描述 Label：說明 ListBox 的內容
+            this.outputDescriptionLabel = new System.Windows.Forms.Label();
+            // 建立按鈕：取得國家
+            this.getCountriesButton = new System.Windows.Forms.Button();
+            // 建立按鈕：離開應用程式
+            this.exitButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // countriesListBox
+            // 
+            // 設定 ListBox 的樣式與位置。ListBox 本身沒有 Text 屬性需要變更，但我們將字型大小設為 18 以符合需求。
+            this.countriesListBox.FormattingEnabled = true;
+            this.countriesListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countriesListBox.Location = new System.Drawing.Point(37, 36);
+            this.countriesListBox.Name = "countriesListBox";
+            this.countriesListBox.Size = new System.Drawing.Size(171, 95);
+            this.countriesListBox.TabIndex = 0;
+            // 
+            // outputDescriptionLabel
+            // 
+            // 設定 Label 的字型為粗體，大小為 18，並將顯示文字改為繁體中文（說明 ListBox 的用途）。
+            this.outputDescriptionLabel.AutoSize = true;
+            this.outputDescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputDescriptionLabel.Location = new System.Drawing.Point(9, 9);
+            this.outputDescriptionLabel.Name = "outputDescriptionLabel";
+            this.outputDescriptionLabel.Size = new System.Drawing.Size(157, 29);
+            this.outputDescriptionLabel.TabIndex = 1;
+            // 將顯示文字設為繁體中文："南美洲的國家"
+            this.outputDescriptionLabel.Text = "南美洲的國家";
+            // 
+            // getCountriesButton
+            // 
+            // 設定取得國家按鈕的字型大小為 18，並將按鈕文字設為繁體中文
+            this.getCountriesButton.Location = new System.Drawing.Point(49, 150);
+            this.getCountriesButton.Name = "getCountriesButton";
+            this.getCountriesButton.Size = new System.Drawing.Size(75, 39);
+            this.getCountriesButton.TabIndex = 2;
+            this.getCountriesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 繁體中文按鈕文字：取得國家
+            this.getCountriesButton.Text = "取得國家";
+            this.getCountriesButton.UseVisualStyleBackColor = true;
+            this.getCountriesButton.Click += new System.EventHandler(this.getCountriesButton_Click);
+            // 
+            // exitButton
+            // 
+            // 設定離開按鈕的字型大小為 18，並將按鈕文字設為繁體中文
+            this.exitButton.Location = new System.Drawing.Point(130, 150);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(75, 39);
+            this.exitButton.TabIndex = 3;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 繁體中文按鈕文字：離開（結束程式）
+            this.exitButton.Text = "離開";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // Form1
+            // 
+            // 設定表單的縮放模式與客戶端大小；同時將表單的字型設為 18 以確保一致性，也將標題文字改為繁體中文。
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(255, 206);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.getCountriesButton);
+            this.Controls.Add(this.outputDescriptionLabel);
+            this.Controls.Add(this.countriesListBox);
+            this.Name = "Form1";
+            // 將表單標題設為繁體中文
+            this.Text = "南美洲";
+            // 也設定表單的預設字型為 18（若需要）
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.ListBox countriesListBox;
+        private System.Windows.Forms.Label outputDescriptionLabel;
+        private System.Windows.Forms.Button getCountriesButton;
+        private System.Windows.Forms.Button exitButton;
+    }
+}
