@@ -1,0 +1,119 @@
+﻿namespace Total_Sales
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// 以繁體中文加入詳細註解：
+        /// 這個方法由表單設計工具自動產生，用來建立與設定所有 UI 元件。
+        /// 在此處我們僅做以下變更：
+        /// 1) 將所有元件的 Text 屬性內容保持為繁體中文（原本已為繁體中文）。
+        /// 2) 將表單與所有元件的字型大小設為 18（符合使用者要求）。
+        /// 其他屬性或事件處理器一律不變，以免影響程式行為。
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.outputDescriptionLabel = new System.Windows.Forms.Label();
+            this.totalLabel = new System.Windows.Forms.Label();
+            this.calculateButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // outputDescriptionLabel
+            // 
+            this.outputDescriptionLabel.AutoSize = true;
+            // 設定字型：此處將字型大小改為 18，字型家族使用系統預設的 Microsoft Sans Serif
+            this.outputDescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputDescriptionLabel.Location = new System.Drawing.Point(29, 28);
+            this.outputDescriptionLabel.Name = "outputDescriptionLabel";
+            this.outputDescriptionLabel.Size = new System.Drawing.Size(63, 13);
+            this.outputDescriptionLabel.TabIndex = 0;
+            // Text 屬性維持或改為繁體中文說明
+            this.outputDescriptionLabel.Text = "總銷售額:";
+            // 
+            // totalLabel
+            // 
+            this.totalLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            // 設定 totalLabel 的字型大小為 18
+            this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLabel.Location = new System.Drawing.Point(98, 23);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(100, 23);
+            this.totalLabel.TabIndex = 1;
+            this.totalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // calculateButton
+            // 
+            // 設定 calculateButton 的字型大小為 18，並保持其 Text 為繁體中文
+            this.calculateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateButton.Location = new System.Drawing.Point(13, 68);
+            this.calculateButton.Name = "calculateButton";
+            this.calculateButton.Size = new System.Drawing.Size(97, 51);
+            this.calculateButton.TabIndex = 2;
+            this.calculateButton.Text = "讀取銷售數據並計算總額";
+            this.calculateButton.UseVisualStyleBackColor = true;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
+            // 
+            // exitButton
+            // 
+            // 設定 exitButton 的字型大小為 18，並將 Text 設為繁體中文「離開」或「退出」：
+            // 這裡保留原本的文字，但建議使用更常見的繁體詞彙「離開」，若需改動請調整。
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Location = new System.Drawing.Point(116, 68);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(97, 51);
+            this.exitButton.TabIndex = 3;
+            this.exitButton.Text = "退出";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // Form1
+            // 
+            // 將表單整體字型大小也設為 18，以確保一致性
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(227, 135);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.calculateButton);
+            this.Controls.Add(this.totalLabel);
+            this.Controls.Add(this.outputDescriptionLabel);
+            this.Name = "Form1";
+            // 表單標題改為繁體中文
+            this.Text = "總銷售額";
+            // 設定表單的字型為 18
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label outputDescriptionLabel;
+        private System.Windows.Forms.Label totalLabel;
+        private System.Windows.Forms.Button calculateButton;
+        private System.Windows.Forms.Button exitButton;
+    }
+}
+
