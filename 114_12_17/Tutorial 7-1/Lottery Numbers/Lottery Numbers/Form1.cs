@@ -1,0 +1,69 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Lottery_Numbers
+{
+    // 表單主要類別：顯示並產生樂透號碼
+    public partial class Form1 : Form
+    {
+        // 建構子：初始化表單元件
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        // "產生號碼" 按鈕的事件處理函式
+        // 作用：產生 SIZE 個亂數（1 到 49），並顯示在五個標籤上
+        private void generateButton_Click(object sender, EventArgs e)
+        {
+            // SIZE 為要產生的號碼個數，使用 const 定義以避免不小心變更
+            const int SIZE = 5;
+
+            // 使用整數陣列儲存產生的號碼
+            int[] lotteryNumbers = new int[SIZE];
+
+            // 建立標籤陣列以方便後續操作
+            Label[] labels =  { firstLabel, secondLabel, thirdLabel, fourthLabel, fifthLabel };
+           
+            // 建立 Random 物件以產生亂數
+            // 注意：在此簡單範例中，每次按下按鈕都會建立新的 Random
+            // 在高頻率呼叫或需要更隨機的情況下，可考慮將 Random 設為類別欄位並重複使用
+            Random random = new Random();
+
+            // 使用迴圈產生 SIZE 個亂數
+            // random.Next(1, 50) 會回傳從 1（包含）到 50（不包含）的整數，因此實際數值範圍為 1 到 49
+            for (int  i = 0; i < SIZE;  i++)
+            {
+                lotteryNumbers[i] = random.Next(1, 50);
+            }
+
+            // 將產生的號碼轉為字串並顯示在各個標籤上
+            // 若陣列元素數量或標籤數量改變，需同步調整這裡的對應
+            //firstLabel.Text = lotteryNumbers[0].ToString();
+            //secondLabel.Text = lotteryNumbers[1].ToString();
+            //thirdLabel.Text = lotteryNumbers[2].ToString();
+            //fourthLabel.Text = lotteryNumbers[3].ToString();
+            //fifthLabel.Text = lotteryNumbers[4].ToString();
+
+            for (int i = 0; i < SIZE; i++)
+            {
+                labels[i].Text = lotteryNumbers[i].ToString();
+            }
+        }
+
+        // "離開" 按鈕的事件處理函式
+        // 作用：關閉目前表單（應用程式若無其他表單則結束程式）
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            // 關閉表單
+            this.Close();
+        }
+    }
+}

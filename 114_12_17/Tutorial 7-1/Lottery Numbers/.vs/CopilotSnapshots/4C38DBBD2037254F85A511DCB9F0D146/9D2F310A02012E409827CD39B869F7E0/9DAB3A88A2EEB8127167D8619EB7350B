@@ -1,0 +1,161 @@
+﻿namespace Lottery_Numbers
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            // --------------------------------------------------
+            // 建立與初始化元件變數
+            // 以下變數代表表單上的五個顯示標籤（label）以及兩個按鈕
+            // 這些註解為繁體中文，說明每一段的用途與屬性調整
+            // --------------------------------------------------
+            this.firstLabel = new System.Windows.Forms.Label();
+            this.secondLabel = new System.Windows.Forms.Label();
+            this.thirdLabel = new System.Windows.Forms.Label();
+            this.fourthLabel = new System.Windows.Forms.Label();
+            this.fifthLabel = new System.Windows.Forms.Label();
+            this.generateButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // firstLabel
+            // 
+            // 設定第一個標籤的外觀：邊框、字型（改為繁體中文常用字型，大小18）、位置與大小
+            this.firstLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.firstLabel.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.firstLabel.Location = new System.Drawing.Point(14, 10);
+            this.firstLabel.Name = "firstLabel";
+            // 標籤寬度與高度調整為能容納18pt字型
+            this.firstLabel.Size = new System.Drawing.Size(60, 40);
+            this.firstLabel.TabIndex = 0;
+            this.firstLabel.Text = "第一"; // 顯示文字改為繁體中文，代表第一個號碼位置
+            this.firstLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // secondLabel
+            // 
+            // 設定第二個標籤，位置相對於第一個標籤向右間隔8像素
+            this.secondLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.secondLabel.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.secondLabel.Location = new System.Drawing.Point(82, 10);
+            this.secondLabel.Name = "secondLabel";
+            this.secondLabel.Size = new System.Drawing.Size(60, 40);
+            this.secondLabel.TabIndex = 1;
+            this.secondLabel.Text = "第二"; // 顯示文字改為繁體中文，代表第二個號碼位置
+            this.secondLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // thirdLabel
+            // 
+            // 設定第三個標籤，維持一致的字型與大小，並保持水平間距
+            this.thirdLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.thirdLabel.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.thirdLabel.Location = new System.Drawing.Point(150, 10);
+            this.thirdLabel.Name = "thirdLabel";
+            this.thirdLabel.Size = new System.Drawing.Size(60, 40);
+            this.thirdLabel.TabIndex = 2;
+            this.thirdLabel.Text = "第三"; // 顯示文字改為繁體中文，代表第三個號碼位置
+            this.thirdLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // fourthLabel
+            // 
+            // 設定第四個標籤
+            this.fourthLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.fourthLabel.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.fourthLabel.Location = new System.Drawing.Point(218, 10);
+            this.fourthLabel.Name = "fourthLabel";
+            this.fourthLabel.Size = new System.Drawing.Size(60, 40);
+            this.fourthLabel.TabIndex = 3;
+            this.fourthLabel.Text = "第四"; // 顯示文字改為繁體中文，代表第四個號碼位置
+            this.fourthLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // fifthLabel
+            // 
+            // 設定第五個標籤
+            this.fifthLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.fifthLabel.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.fifthLabel.Location = new System.Drawing.Point(286, 10);
+            this.fifthLabel.Name = "fifthLabel";
+            this.fifthLabel.Size = new System.Drawing.Size(60, 40);
+            this.fifthLabel.TabIndex = 4;
+            this.fifthLabel.Text = "第五"; // 顯示文字改為繁體中文，代表第五個號碼位置
+            this.fifthLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // generateButton
+            // 
+            // 設定「產生號碼」按鈕的文字、大小與位置（字型也改為18pt）
+            this.generateButton.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.generateButton.Location = new System.Drawing.Point(90, 65);
+            this.generateButton.Name = "generateButton";
+            this.generateButton.Size = new System.Drawing.Size(110, 40);
+            this.generateButton.TabIndex = 5;
+            this.generateButton.Text = "產生號碼"; // 將按鈕文字改為繁體中文
+            this.generateButton.UseVisualStyleBackColor = true;
+            this.generateButton.Click += new System.EventHandler(this.generateButton_Click);
+            // 
+            // exitButton
+            // 
+            // 設定「離開」按鈕的文字、大小與位置
+            this.exitButton.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.exitButton.Location = new System.Drawing.Point(210, 65);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(110, 40);
+            this.exitButton.TabIndex = 6;
+            this.exitButton.Text = "離開"; // 將按鈕文字改為繁體中文
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // Form1
+            // 
+            // 調整表單整體大小以容納放大的字型與元件
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(370, 125); // 設定表單大小
+            // 將所有元件加入表單，保持原有的加入順序
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.generateButton);
+            this.Controls.Add(this.fifthLabel);
+            this.Controls.Add(this.fourthLabel);
+            this.Controls.Add(this.thirdLabel);
+            this.Controls.Add(this.secondLabel);
+            this.Controls.Add(this.firstLabel);
+            this.Name = "Form1";
+            this.Text = "樂透號碼"; // 將表單標題改為繁體中文
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label firstLabel;
+        private System.Windows.Forms.Label secondLabel;
+        private System.Windows.Forms.Label thirdLabel;
+        private System.Windows.Forms.Label fourthLabel;
+        private System.Windows.Forms.Label fifthLabel;
+        private System.Windows.Forms.Button generateButton;
+        private System.Windows.Forms.Button exitButton;
+    }
+}
+
