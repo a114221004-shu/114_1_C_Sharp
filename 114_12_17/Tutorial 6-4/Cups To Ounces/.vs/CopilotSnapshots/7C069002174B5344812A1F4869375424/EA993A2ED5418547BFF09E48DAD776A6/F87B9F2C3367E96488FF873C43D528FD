@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Cups_To_Ounces
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        // CupsToOunces 方法接受杯數（cups）作為參數，
+        // 並傳回相等的液體盎司數（ounces）。
+     
+
+        private void convertButton_Click(object sender, EventArgs e)
+        {
+            double cups;       // 儲存輸入的杯數
+            double ounces;     // 儲存計算後的盎司數
+
+            // 嘗試將使用者輸入的文字轉成數字
+            if(double.TryParse(cupsTextBox.Text, out cups))
+            {
+                // 呼叫轉換方法計算盎司
+                ounces = CupsToOunces(cups);
+                // 顯示格式化後的盎司結果
+                ouncesLabel.Text = ounces.ToString("F2");
+            }
+            else
+            {
+                // 若轉換失敗，顯示錯誤訊息提示使用者
+                MessageBox.Show("請輸入有效的數字。", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        // 執行杯數轉盎司的實際計算：1 杯 = 8 盎司
+        private double CupsToOunces(double cups)
+        {
+            return cups * 8;
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            // 關閉表單並結束程式
+            this.Close();
+        }
+    }
+}
