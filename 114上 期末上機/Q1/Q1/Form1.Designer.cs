@@ -176,7 +176,6 @@
             this.Controls.Add(this.playerLabel);
             this.Controls.Add(this.computerLabel);
             this.Name = "Form1";
-            this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paper_computerPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scissor_computerPictureBox)).EndInit();
