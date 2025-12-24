@@ -118,19 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="paper_computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paper_computer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="scissor_computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scissor_computer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stone_computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stone_computer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="paper_computer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paper_computer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="scissor_computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scissor_computer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="paper_computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paper_computer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="paper_player" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paper_player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paper_computer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paper_computer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scissor_player" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scissor_player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stone_player" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stone_player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

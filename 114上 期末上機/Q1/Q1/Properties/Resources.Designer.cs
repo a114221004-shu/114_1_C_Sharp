@@ -103,9 +103,29 @@ namespace Q1.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap scissor_player {
+            get {
+                object obj = ResourceManager.GetObject("scissor_player", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap stone_computer {
             get {
                 object obj = ResourceManager.GetObject("stone_computer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap stone_player {
+            get {
+                object obj = ResourceManager.GetObject("stone_player", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -12,13 +12,154 @@ namespace Q1
 {
     public partial class Form1 : Form
     {
+        // 使用同一個 Random 實例以避免相同種子造成的重複
+        private readonly Random rnd = new Random();
+
         public Form1()
         {
             InitializeComponent();
+            // 隱藏所有電腦與玩家的 PictureBox，使用 Designer 中定義的名稱
+            paper_computerPictureBox.Visible = false;
+            scissor_computerPictureBox.Visible = false;
+            stone_computerPictureBox.Visible = false;
+            playerPictureBox.Visible = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        decimal playerwin = 0;
+        decimal cpuwin = 0;
+        private void stoneButton_Click(object sender, EventArgs e)
+        {
+            // 設定玩家圖片並顯示
+            playerPictureBox.Image = Properties.Resources.stone_player;
+            playerPictureBox.Visible = true;
+
+            // 電腦隨機選擇 0: 石頭, 1: 布, 2: 剪刀
+            int cpuChoice = rnd.Next(3);
+
+            // 先隱藏所有電腦的 PictureBox
+            paper_computerPictureBox.Visible = false;
+            scissor_computerPictureBox.Visible = false;
+            stone_computerPictureBox.Visible = false;
+
+            // 根據隨機結果顯示對應的 PictureBox
+            switch (cpuChoice)
+            {
+                case 0:
+                    stone_computerPictureBox.Visible = true;
+                    break;
+                case 1:
+                    paper_computerPictureBox.Visible = true;
+                    break;
+                default:
+                    scissor_computerPictureBox.Visible = true;
+                    break;
+            }
+
+            if (cpuChoice == 0)
+            {
+                resultLabel.Text = "平手";
+            }
+            else if (cpuChoice == 1)
+            {
+                resultLabel.Text = "電腦贏";
+                cpuwin += 1;
+            }
+            else
+            {
+                resultLabel.Text = "玩家贏";
+                playerwin += 1;
+            }
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"遊戲結束！\n \n 玩家贏了 {playerwin} 次\n電腦贏了 {cpuwin} 次", "遊戲統計");
+        }
+
+        private void paperButton_Click(object sender, EventArgs e)
+        {
+            playerPictureBox.Image = Properties.Resources.paper_player;
+            playerPictureBox.Visible = true;
+
+            int cpuChoice = rnd.Next(3);
+
+            paper_computerPictureBox.Visible = false;
+            scissor_computerPictureBox.Visible = false;
+            stone_computerPictureBox.Visible = false;
+
+            switch (cpuChoice)
+            {
+                case 0:
+                    stone_computerPictureBox.Visible = true;
+                    break;
+                case 1:
+                    paper_computerPictureBox.Visible = true;
+                    break;
+                default:
+                    scissor_computerPictureBox.Visible = true;
+                    break;
+            }
+
+            if (cpuChoice == 0)
+            {
+                resultLabel.Text = "玩家贏";
+                playerwin += 1;
+            }
+            else if (cpuChoice == 1)
+            {
+                resultLabel.Text = "平手";
+            }
+            else
+            {
+                resultLabel.Text = "電腦贏";
+                cpuwin += 1;
+            }
+        }
+
+        private void scissorButton_Click(object sender, EventArgs e)
+        {
+            playerPictureBox.Image = Properties.Resources.scissor_player;
+            playerPictureBox.Visible = true;
+
+            int cpuChoice = rnd.Next(3);
+
+            paper_computerPictureBox.Visible = false;
+            scissor_computerPictureBox.Visible = false;
+            stone_computerPictureBox.Visible = false;
+
+            switch (cpuChoice)
+            {
+                case 0:
+                    stone_computerPictureBox.Visible = true;
+                    break;
+                case 1:
+                    paper_computerPictureBox.Visible = true;
+                    break;
+                default:
+                    scissor_computerPictureBox.Visible = true;
+                    break;
+            }
+
+            if (cpuChoice == 0)
+            {
+                resultLabel.Text = "電腦贏";
+                cpuwin += 1;
+            }
+            else if (cpuChoice == 1)
+            {
+                resultLabel.Text = "玩家贏";
+                playerwin += 1;
+            }
+            else
+            {
+                resultLabel.Text = "平手";
+            }
+
 
         }
     }

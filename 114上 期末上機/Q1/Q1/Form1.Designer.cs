@@ -35,10 +35,14 @@
             this.paperButton = new System.Windows.Forms.Button();
             this.scissorButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.playerPictureBox = new System.Windows.Forms.PictureBox();
+            this.paper_computerPictureBox = new System.Windows.Forms.PictureBox();
+            this.scissor_computerPictureBox = new System.Windows.Forms.PictureBox();
+            this.stone_computerPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paper_computerPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scissor_computerPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stone_computerPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // computerLabel
@@ -65,7 +69,7 @@
             // 
             this.resultLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.resultLabel.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.resultLabel.Location = new System.Drawing.Point(175, 331);
+            this.resultLabel.Location = new System.Drawing.Point(173, 338);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(444, 62);
             this.resultLabel.TabIndex = 2;
@@ -74,32 +78,35 @@
             // stoneButton
             // 
             this.stoneButton.Font = new System.Drawing.Font("新細明體", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.stoneButton.Location = new System.Drawing.Point(67, 433);
+            this.stoneButton.Location = new System.Drawing.Point(64, 453);
             this.stoneButton.Name = "stoneButton";
             this.stoneButton.Size = new System.Drawing.Size(164, 62);
             this.stoneButton.TabIndex = 3;
             this.stoneButton.Text = "石頭";
             this.stoneButton.UseVisualStyleBackColor = true;
+            this.stoneButton.Click += new System.EventHandler(this.stoneButton_Click);
             // 
             // paperButton
             // 
             this.paperButton.Font = new System.Drawing.Font("新細明體", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.paperButton.Location = new System.Drawing.Point(315, 433);
+            this.paperButton.Location = new System.Drawing.Point(312, 453);
             this.paperButton.Name = "paperButton";
             this.paperButton.Size = new System.Drawing.Size(164, 62);
             this.paperButton.TabIndex = 4;
             this.paperButton.Text = "布";
             this.paperButton.UseVisualStyleBackColor = true;
+            this.paperButton.Click += new System.EventHandler(this.paperButton_Click);
             // 
             // scissorButton
             // 
             this.scissorButton.Font = new System.Drawing.Font("新細明體", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.scissorButton.Location = new System.Drawing.Point(561, 433);
+            this.scissorButton.Location = new System.Drawing.Point(558, 453);
             this.scissorButton.Name = "scissorButton";
             this.scissorButton.Size = new System.Drawing.Size(164, 62);
             this.scissorButton.TabIndex = 5;
             this.scissorButton.Text = "剪刀";
             this.scissorButton.UseVisualStyleBackColor = true;
+            this.scissorButton.Click += new System.EventHandler(this.scissorButton_Click);
             // 
             // exitButton
             // 
@@ -110,34 +117,57 @@
             this.exitButton.TabIndex = 6;
             this.exitButton.Text = "遊戲結束";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // pictureBox2
+            // playerPictureBox
             // 
-            this.pictureBox2.Image = global::Q1.Properties.Resources.paper_player;
-            this.pictureBox2.Location = new System.Drawing.Point(441, 140);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(253, 147);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.playerPictureBox.Image = global::Q1.Properties.Resources.paper_player;
+            this.playerPictureBox.Location = new System.Drawing.Point(446, 140);
+            this.playerPictureBox.Name = "playerPictureBox";
+            this.playerPictureBox.Size = new System.Drawing.Size(253, 147);
+            this.playerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playerPictureBox.TabIndex = 9;
+            this.playerPictureBox.TabStop = false;
             // 
-            // pictureBox1
+            // paper_computerPictureBox
             // 
-            this.pictureBox1.Image = global::Q1.Properties.Resources.paper_computer;
-            this.pictureBox1.Location = new System.Drawing.Point(67, 140);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(253, 147);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.paper_computerPictureBox.Image = global::Q1.Properties.Resources.paper_computer;
+            this.paper_computerPictureBox.Location = new System.Drawing.Point(67, 140);
+            this.paper_computerPictureBox.Name = "paper_computerPictureBox";
+            this.paper_computerPictureBox.Size = new System.Drawing.Size(253, 147);
+            this.paper_computerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.paper_computerPictureBox.TabIndex = 7;
+            this.paper_computerPictureBox.TabStop = false;
+            // 
+            // scissor_computerPictureBox
+            // 
+            this.scissor_computerPictureBox.Image = global::Q1.Properties.Resources.scissor_computer;
+            this.scissor_computerPictureBox.Location = new System.Drawing.Point(64, 140);
+            this.scissor_computerPictureBox.Name = "scissor_computerPictureBox";
+            this.scissor_computerPictureBox.Size = new System.Drawing.Size(253, 147);
+            this.scissor_computerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.scissor_computerPictureBox.TabIndex = 10;
+            this.scissor_computerPictureBox.TabStop = false;
+            // 
+            // stone_computerPictureBox
+            // 
+            this.stone_computerPictureBox.Image = global::Q1.Properties.Resources.stone_computer;
+            this.stone_computerPictureBox.Location = new System.Drawing.Point(67, 140);
+            this.stone_computerPictureBox.Name = "stone_computerPictureBox";
+            this.stone_computerPictureBox.Size = new System.Drawing.Size(253, 147);
+            this.stone_computerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.stone_computerPictureBox.TabIndex = 11;
+            this.stone_computerPictureBox.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 667);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.stone_computerPictureBox);
+            this.Controls.Add(this.scissor_computerPictureBox);
+            this.Controls.Add(this.playerPictureBox);
+            this.Controls.Add(this.paper_computerPictureBox);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.scissorButton);
             this.Controls.Add(this.paperButton);
@@ -147,8 +177,10 @@
             this.Controls.Add(this.computerLabel);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paper_computerPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scissor_computerPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stone_computerPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,8 +195,10 @@
         private System.Windows.Forms.Button paperButton;
         private System.Windows.Forms.Button scissorButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox paper_computerPictureBox;
+        private System.Windows.Forms.PictureBox playerPictureBox;
+        private System.Windows.Forms.PictureBox scissor_computerPictureBox;
+        private System.Windows.Forms.PictureBox stone_computerPictureBox;
     }
 }
 
