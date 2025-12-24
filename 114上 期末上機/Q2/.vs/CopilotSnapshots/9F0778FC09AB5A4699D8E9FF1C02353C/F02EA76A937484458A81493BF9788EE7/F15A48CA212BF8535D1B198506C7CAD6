@@ -1,0 +1,104 @@
+﻿using System;
+using System.Windows.Forms;
+
+namespace Q2
+{
+    public partial class Form1 : Form
+    {
+        // prices
+        private const decimal PRICE_OIL = 780m;
+        private const decimal PRICE_LUBE = 540m;
+        private const decimal PRICE_RADIATOR = 900m;
+        private const decimal PRICE_TRANS = 2400m;
+        private const decimal PRICE_INSPECT = 450m;
+        private const decimal PRICE_MUFFLER = 3000m;
+        private const decimal PRICE_TIRE = 600m;
+        private const decimal LABOR_RATE = 80m; // assume NT$80 per hour
+        private const decimal TAX_RATE = 0.06m;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal serviceLabor = 0m;
+                // sum selected service item prices as service/labor
+                if (checkBoxOilChange.Checked) serviceLabor += PRICE_OIL;
+                if (checkBoxLube.Checked) serviceLabor += PRICE_LUBE;
+                if (checkBoxRadiator.Checked) serviceLabor += PRICE_RADIATOR;
+                if (checkBoxTrans.Checked) serviceLabor += PRICE_TRANS;
+                if (checkBoxInspect.Checked) serviceLabor += PRICE_INSPECT;
+                if (checkBoxMuffler.Checked) serviceLabor += PRICE_MUFFLER;
+                if (checkBoxTire.Checked) serviceLabor += PRICE_TIRE;
+
+                // parse parts
+                decimal parts = 0m;
+                if (!string.IsNullOrWhiteSpace(txtParts.Text))
+                {
+                    if (!decimal.TryParse(txtParts.Text, out parts) || parts < 0)
+                    {
+                        MessageBox.Show("請在零件欄位輸入有效的數字。", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+
+                // parse hours
+                decimal hours = 0m;
+                if (!string.IsNullOrWhiteSpace(txtHours.Text))
+                {
+                    if (!decimal.TryParse(txtHours.Text, out hours) || hours < 0)
+                    {
+                        MessageBox.Show("請在工時欄位輸入有效的數字。", "輸入錯誤", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+
+                decimal laborCost = hours * LABOR_RATE;
+
+                // serviceLabor field in summary should show sum of fixed service items + labor cost
+                decimal totalServiceAndLabor = serviceLabor + laborCost;
+
+                decimal tax = Math.Round(parts * TAX_RATE, 2);
+                decimal total = Math.Round(totalServiceAndLabor + parts + tax, 2);
+
+                txtServiceLabor.Text = totalServiceAndLabor.ToString("F2");
+                txtPartsCost.Text = parts.ToString("F2");
+                txtTax.Text = tax.ToString("F2");
+                txtTotal.Text = total.ToString("F2");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("發生錯誤: " + ex.Message);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            // clear checkboxes
+            checkBoxOilChange.Checked = false;
+            checkBoxLube.Checked = false;
+            checkBoxRadiator.Checked = false;
+            checkBoxTrans.Checked = false;
+            checkBoxInspect.Checked = false;
+            checkBoxMuffler.Checked = false;
+            checkBoxTire.Checked = false;
+
+            // clear textboxes
+            txtParts.Text = string.Empty;
+            txtHours.Text = string.Empty;
+            txtServiceLabor.Text = string.Empty;
+            txtPartsCost.Text = string.Empty;
+            txtTax.Text = string.Empty;
+            txtTotal.Text = string.Empty;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

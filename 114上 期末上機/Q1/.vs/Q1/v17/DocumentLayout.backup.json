@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\m303\\Desktop\\114_1_C_Sharp\\114\u4E0A \u671F\u672B\u4E0A\u6A5F\\Q1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47955D98-39FC-4C30-BEB2-DB0CD2E23633}|Q1\\Q1.csproj|C:\\Users\\m303\\Desktop\\114_1_C_Sharp\\114\u4E0A \u671F\u672B\u4E0A\u6A5F\\Q1\\q1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{47955D98-39FC-4C30-BEB2-DB0CD2E23633}|Q1\\Q1.csproj|c:\\users\\m303\\desktop\\114_1_c_sharp\\114\u4E0A \u671F\u672B\u4E0A\u6A5F\\q1\\q1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47955D98-39FC-4C30-BEB2-DB0CD2E23633}|Q1\\Q1.csproj|solutionrelative:q1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47955D98-39FC-4C30-BEB2-DB0CD2E23633}|Q1\\Q1.csproj|c:\\users\\m303\\desktop\\114_1_c_sharp\\114\u4E0A \u671F\u672B\u4E0A\u6A5F\\q1\\q1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{47955D98-39FC-4C30-BEB2-DB0CD2E23633}|Q1\\Q1.csproj|C:\\Users\\m303\\Desktop\\114_1_C_Sharp\\114\u4E0A \u671F\u672B\u4E0A\u6A5F\\Q1\\q1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{47955D98-39FC-4C30-BEB2-DB0CD2E23633}|Q1\\Q1.csproj|solutionrelative:q1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -42,8 +42,7 @@
               "ToolTip": "C:\\Users\\m303\\Desktop\\114_1_C_Sharp\\114\u4E0A \u671F\u672B\u4E0A\u6A5F\\Q1\\Q1\\Form1.cs [\u8A2D\u8A08]",
               "RelativeToolTip": "Q1\\Form1.cs [\u8A2D\u8A08]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T02:54:45.247Z",
-              "EditorCaption": " [\u8A2D\u8A08]"
+              "WhenOpened": "2025-12-24T02:54:45.247Z"
             }
           ]
         }
